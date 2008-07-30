@@ -1,5 +1,5 @@
 # TODO:
-#	- do something with not-lang()ed files in translations dir
+#	- fet doesn't respect locale settings
 #	- mv sample_inputs files to proper place (maybe /usr/src/examples
 #	  or _docdir)
 #
@@ -7,7 +7,7 @@ Summary:	FET is open source free software for automatically scheduling the timet
 Summary(hu.UTF-8):	FET egy nyílt forrású órarend-készítő program
 Name:		fet
 Version:	5.6.0
-Release:	0.1
+Release:	0.2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www.lalescu.ro/liviu/fet/download/%{name}-%{version}.tar.bz2
@@ -44,8 +44,10 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_datadir}/%{name}/transl
 
 install fet $RPM_BUILD_ROOT%{_bindir}
 install doc/fet.1 $RPM_BUILD_ROOT%{_mandir}/man1
-install translations/* $RPM_BUILD_ROOT%{_datadir}/%{name}/translations
+install translations/fet_*.qm $RPM_BUILD_ROOT%{_datadir}/%{name}/translations
 %{__cp} -a sample_inputs $RPM_BUILD_ROOT%{_datadir}/%{name}
+
+%{__rm} -f $RPM_BUILD_ROOT%{_datadir}/%{name}/translations/fet_untranslated.qm
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -59,35 +61,17 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}/sample_inputs
 %dir %{_datadir}/%{name}/translations
 %lang(ar) %{_datadir}/%{name}/translations/fet_ar.qm
-%lang(ar) %{_datadir}/%{name}/translations/fet_ar.ts
 %lang(ca) %{_datadir}/%{name}/translations/fet_ca.qm
-%lang(ca) %{_datadir}/%{name}/translations/fet_ca.ts
 %lang(de) %{_datadir}/%{name}/translations/fet_de.qm
-%lang(de) %{_datadir}/%{name}/translations/fet_de.ts
-#%{_datadir}/%{name}/translations/fet_de_german translation note.txt
 %lang(el) %{_datadir}/%{name}/translations/fet_el.qm
-%lang(el) %{_datadir}/%{name}/translations/fet_el.ts
 %lang(es) %{_datadir}/%{name}/translations/fet_es.qm
-%lang(es) %{_datadir}/%{name}/translations/fet_es.ts
 %lang(fr) %{_datadir}/%{name}/translations/fet_fr.qm
-%lang(fr) %{_datadir}/%{name}/translations/fet_fr.ts
 %lang(hu) %{_datadir}/%{name}/translations/fet_hu.qm
-%lang(hu) %{_datadir}/%{name}/translations/fet_hu.ts
 %lang(id) %{_datadir}/%{name}/translations/fet_id.qm
-%lang(id) %{_datadir}/%{name}/translations/fet_id.ts
 %lang(it) %{_datadir}/%{name}/translations/fet_it.qm
-%lang(it) %{_datadir}/%{name}/translations/fet_it.ts
 %lang(mk) %{_datadir}/%{name}/translations/fet_mk.qm
-%lang(mk) %{_datadir}/%{name}/translations/fet_mk.ts
 %lang(ms) %{_datadir}/%{name}/translations/fet_ms.qm
-%lang(ms) %{_datadir}/%{name}/translations/fet_ms.ts
 %lang(nl) %{_datadir}/%{name}/translations/fet_nl.qm
-%lang(nl) %{_datadir}/%{name}/translations/fet_nl.ts
 %lang(pl) %{_datadir}/%{name}/translations/fet_pl.qm
-%lang(pl) %{_datadir}/%{name}/translations/fet_pl.ts
 %lang(ro) %{_datadir}/%{name}/translations/fet_ro.qm
-%lang(ro) %{_datadir}/%{name}/translations/fet_ro.ts
 %lang(tr) %{_datadir}/%{name}/translations/fet_tr.qm
-%lang(tr) %{_datadir}/%{name}/translations/fet_tr.ts
-#%{_datadir}/%{name}/translations/fet_untranslated.qm
-#%{_datadir}/%{name}/translations/fet_untranslated.ts
