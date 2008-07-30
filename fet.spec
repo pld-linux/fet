@@ -8,7 +8,6 @@ Group:		X11/Applications
 Source0:	http://www.lalescu.ro/liviu/fet/download/%{name}-%{version}.tar.bz2
 # Source0-md5:	00a416ed0d4b7613120c2737221d0ee5
 URL:		http://www.lalescu.ro/liviu/fet/
-BuildRequires:	libstdc++-devel
 BuildRequires:	Qt3Support-devel
 BuildRequires:	QtCore-devel
 BuildRequires:	QtGui-devel
@@ -36,14 +35,13 @@ qmake-qt4 fet.pro
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}/
-install -v fet $RPM_BUILD_ROOT%{_bindir}/
-install -d $RPM_BUILD_ROOT%{_mandir}/man1
-install -v doc/fet.1 $RPM_BUILD_ROOT%{_mandir}/man1/
-install -d $RPM_BUILD_ROOT%{_datadir}/%{name}/{sample_inputs,translations}
-install -v sample_inputs/* $RPM_BUILD_ROOT%{_datadir}/%{name}/sample_inputs/
-install -v translations/* $RPM_BUILD_ROOT%{_datadir}/%{name}/translations/
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_datadir}/%{name}/translations}
+
+install fet $RPM_BUILD_ROOT%{_bindir}
+install doc/fet.1 $RPM_BUILD_ROOT%{_mandir}/man1
+install translations/* $RPM_BUILD_ROOT%{_datadir}/%{name}/translations
+%{__cp} -a sample_inputs $RPM_BUILD_ROOT%{_datadir}/%{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
