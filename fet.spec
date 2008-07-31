@@ -5,6 +5,7 @@
 #
 Summary:	FET is open source free software for automatically scheduling the timetable
 Summary(hu.UTF-8):	FET egy nyílt forrású órarend-készítő program
+Summary(pl.UTF-8):	Narzędzie do automatycznego układania planów dla szkół i uczelni
 Name:		fet
 Version:	5.6.0
 Release:	0.2
@@ -30,6 +31,11 @@ efficient timetabling algorithm.
 FET egy nílt forrású szoftver, amely általános iskolák, középiskolák,
 egyetemek órarendjét (időbeosztását) készíti el. Egy gyors és hatékony
 algoritmust használ.
+
+%description -l pl.UTF-8
+FET jest oprogramowaniem o otwartych źródłach służącym do automatycznego
+układania planów zajęć szkół i uczelni. Program ten używa szybkiego i
+efektywnego algorytmu układającego harmonogramy.
 
 %prep
 %setup -q
