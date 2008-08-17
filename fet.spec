@@ -1,4 +1,5 @@
 # TODO:
+#	- optflags
 #	- fet doesn't respect locale settings
 #	- mv sample_inputs files to proper place (maybe /usr/src/examples
 #	  or _docdir)
@@ -33,9 +34,9 @@ egyetemek órarendjét (időbeosztását) készíti el. Egy gyors és hatékony
 algoritmust használ.
 
 %description -l pl.UTF-8
-FET jest oprogramowaniem o otwartych źródłach służącym do automatycznego
-układania planów zajęć szkół i uczelni. Program ten używa szybkiego i
-efektywnego algorytmu układającego harmonogramy.
+FET jest oprogramowaniem o otwartych źródłach służącym do
+automatycznego układania planów zajęć szkół i uczelni. Program ten
+używa szybkiego i efektywnego algorytmu układającego harmonogramy.
 
 %prep
 %setup -q
