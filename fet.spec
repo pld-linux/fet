@@ -66,7 +66,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_datadir}/%{name}/transl
 install fet $RPM_BUILD_ROOT%{_bindir}
 install doc/fet.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install translations/fet_*.qm $RPM_BUILD_ROOT%{_datadir}/%{name}/translations
-install -d $RPM_BUILD_ROOT%{_docdir}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 %{__cp} -a sample_inputs $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__rm} -f $RPM_BUILD_ROOT%{_datadir}/%{name}/translations/fet_untranslated.qm
