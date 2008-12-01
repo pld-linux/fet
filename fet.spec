@@ -1,19 +1,17 @@
 # TODO:
 #	- optflags
 #	- fet doesn't respect locale settings
-#	- mv sample_inputs files to proper place (maybe /usr/src/examples
-#	  or _docdir)
 #
 Summary:	FET is open source free software for automatically scheduling the timetable
 Summary(hu.UTF-8):	FET egy nyílt forrású órarend-készítő program
 Summary(pl.UTF-8):	Narzędzie do automatycznego układania planów dla szkół i uczelni
 Name:		fet
-Version:	5.7.4
+Version:	5.7.5
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www.lalescu.ro/liviu/fet/download/%{name}-%{version}.tar.bz2
-# Source0-md5:	24d5e51d4606d24da4cd24a78429e6b1
+# Source0-md5:	7d815e3ba40f2eb503a5c82a06179dca
 URL:		http://www.lalescu.ro/liviu/fet
 BuildRequires:	Qt3Support-devel
 BuildRequires:	QtCore-devel
@@ -39,6 +37,18 @@ FET jest oprogramowaniem o otwartych źródłach służącym do
 automatycznego układania planów zajęć szkół i uczelni. Program ten
 używa szybkiego i efektywnego algorytmu układającego harmonogramy.
 
+%package examples
+Summary:	Sample inputs to FET
+Summary(hu.UTF-8):	Példafájlok FET-hez
+Group:		X11/Applications
+
+%description examples
+Sample input files to FET from all the world.
+
+%description examples -l hu.UTF-8
+Példafájlok FET-hez a világ minden tájáról.
+
+
 %prep
 %setup -q
 
@@ -53,7 +63,8 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_datadir}/%{name}/transl
 install fet $RPM_BUILD_ROOT%{_bindir}
 install doc/fet.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install translations/fet_*.qm $RPM_BUILD_ROOT%{_datadir}/%{name}/translations
-%{__cp} -a sample_inputs $RPM_BUILD_ROOT%{_datadir}/%{name}
+install -d $RPM_BUILD_ROOT%{_docdir}
+%{__cp} -a sample_inputs $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__rm} -f $RPM_BUILD_ROOT%{_datadir}/%{name}/translations/fet_untranslated.qm
 
@@ -66,7 +77,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man1/fet.1*
 %dir %{_datadir}/%{name}
-%{_datadir}/%{name}/sample_inputs
 %dir %{_datadir}/%{name}/translations
 %lang(ar) %{_datadir}/%{name}/translations/fet_ar.qm
 %lang(ca) %{_datadir}/%{name}/translations/fet_ca.qm
@@ -83,3 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pl) %{_datadir}/%{name}/translations/fet_pl.qm
 %lang(ro) %{_datadir}/%{name}/translations/fet_ro.qm
 %lang(tr) %{_datadir}/%{name}/translations/fet_tr.qm
+
+%files examples
+%defattr(644,root,root,755)
+%{_examplesdir}/%{name}-%{version}/sample_inputs
