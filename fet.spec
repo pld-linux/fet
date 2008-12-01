@@ -40,6 +40,7 @@ używa szybkiego i efektywnego algorytmu układającego harmonogramy.
 %package examples
 Summary:	Sample inputs to FET
 Summary(hu.UTF-8):	Példafájlok FET-hez
+Summary(pl.UTF-8):	Przykładowe pliki wejściowe dla programu FET
 Group:		X11/Applications
 
 %description examples
@@ -48,6 +49,8 @@ Sample input files to FET from all the world.
 %description examples -l hu.UTF-8
 Példafájlok FET-hez a világ minden tájáról.
 
+%description examples -l pl.UTF-8
+Przykładowe pliki wejściowe dla programu FET.
 
 %prep
 %setup -q
@@ -75,7 +78,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog CONTRIBUTORS GUESTBOOK LINKS README REFERENCES SPONSORS THANKS TODO TRANSLATORS doc/*/*
 %attr(755,root,root) %{_bindir}/%{name}
-%{_mandir}/man1/fet.1*
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/translations
 %lang(ar) %{_datadir}/%{name}/translations/fet_ar.qm
@@ -93,6 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pl) %{_datadir}/%{name}/translations/fet_pl.qm
 %lang(ro) %{_datadir}/%{name}/translations/fet_ro.qm
 %lang(tr) %{_datadir}/%{name}/translations/fet_tr.qm
+%{_mandir}/man1/fet.1*
 
 %files examples
 %defattr(644,root,root,755)
