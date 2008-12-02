@@ -12,6 +12,8 @@ License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www.lalescu.ro/liviu/fet/download/%{name}-%{version}.tar.bz2
 # Source0-md5:	7d815e3ba40f2eb503a5c82a06179dca
+Source1:	http://www.timetabling.de/manual/FET-manual.en.zip
+# Source1-md5:	5882c67c5955d5cd80ce53ff4802545e
 URL:		http://www.lalescu.ro/liviu/fet
 BuildRequires:	Qt3Support-devel
 BuildRequires:	QtCore-devel
@@ -52,8 +54,21 @@ Példafájlok FET-hez a világ minden tájáról.
 %description examples -l pl.UTF-8
 Przykładowe pliki wejściowe dla programu FET.
 
+%package doc
+Summary:	FET documentation by Volker Dirr
+Summary(hu.UTF8):	FET dokumentáció Volker Dirr "szerkesztésében"
+Group:		X11/Applications
+
+%description doc
+FET documentation by Volker Dirr.
+
+%description doc -l hu.UTF-8
+FET dokumentáció Volker Dirr tollából.
+
+
 %prep
 %setup -q
+unzip %{SOURCE1}
 
 %build
 qmake-qt4 fet.pro
@@ -70,6 +85,10 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 %{__cp} -a sample_inputs $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__rm} -f $RPM_BUILD_ROOT%{_datadir}/%{name}/translations/fet_untranslated.qm
+
+# doc
+install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-doc
+install FET-manual.en/* $RPM_BUILD_ROOT%{_docdir}/%{name}-doc
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -100,3 +119,8 @@ rm -rf $RPM_BUILD_ROOT
 %files examples
 %defattr(644,root,root,755)
 %{_examplesdir}/%{name}-%{version}/sample_inputs
+
+%files doc
+%defattr(644,root,root,755)
+%dir %{_docdir}/%{name}-doc
+%{_docdir}/%{name}-doc
