@@ -56,7 +56,8 @@ Przykładowe pliki wejściowe dla programu FET.
 
 %package doc
 Summary:	FET documentation by Volker Dirr
-Summary(hu.UTF8):	FET dokumentáció Volker Dirr "szerkesztésében"
+Summary(hu.UTF-8):	FET dokumentáció Volker Dirr "szerkesztésében"
+Summary(pl.UTF-8):	Dokumentacja do programu FET autorstwa Volkera Dirra
 Group:		X11/Applications
 
 %description doc
@@ -65,6 +66,8 @@ FET documentation by Volker Dirr.
 %description doc -l hu.UTF-8
 FET dokumentáció Volker Dirr tollából.
 
+%description doc -l pl.UTF-8
+Dokumentacja do programu FET autorstwa Volkera Dirra.
 
 %prep
 %setup -q
