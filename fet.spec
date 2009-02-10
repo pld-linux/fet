@@ -74,7 +74,8 @@ Dokumentacja do programu FET autorstwa Volkera Dirra.
 unzip %{SOURCE1}
 
 %build
-qmake-qt4 fet.pro
+qmake-qt4 fet.pro \
+	QMAKE_CXXFLAGS_RELEASE="%{rpmcxxflags}"
 %{__make}
 
 %install
