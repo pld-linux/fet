@@ -6,12 +6,12 @@ Summary:	FET is open source free software for automatically scheduling the timet
 Summary(hu.UTF-8):	FET egy nyílt forrású órarend-készítő program
 Summary(pl.UTF-8):	Narzędzie do automatycznego układania planów dla szkół i uczelni
 Name:		fet
-Version:	5.9.4
+Version:	5.10.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www.lalescu.ro/liviu/fet/download/%{name}-%{version}.tar.bz2
-# Source0-md5:	014a199f3e0c3e48d434af65292f960e
+# Source0-md5:	e6d32699bd61c02b8ed5ef2677a091e8
 Source1:	http://www.timetabling.de/manual/FET-manual.en.zip
 # Source1-md5:	5882c67c5955d5cd80ce53ff4802545e
 URL:		http://www.lalescu.ro/liviu/fet
@@ -86,7 +86,7 @@ install fet $RPM_BUILD_ROOT%{_bindir}
 install doc/fet.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install translations/fet_*.qm $RPM_BUILD_ROOT%{_datadir}/%{name}/translations
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-%{__cp} -a sample_inputs $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+%{__cp} -a examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__rm} -f $RPM_BUILD_ROOT%{_datadir}/%{name}/translations/fet_untranslated.qm
 
@@ -106,6 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ar) %{_datadir}/%{name}/translations/fet_ar.qm
 %lang(ca) %{_datadir}/%{name}/translations/fet_ca.qm
 %lang(de) %{_datadir}/%{name}/translations/fet_de.qm
+%lang(fa) %{_datadir}/%{name}/translations/fet_fa.qm
 %lang(el) %{_datadir}/%{name}/translations/fet_el.qm
 %lang(es) %{_datadir}/%{name}/translations/fet_es.qm
 %lang(fr) %{_datadir}/%{name}/translations/fet_fr.qm
@@ -118,6 +119,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(nl) %{_datadir}/%{name}/translations/fet_nl.qm
 %lang(pl) %{_datadir}/%{name}/translations/fet_pl.qm
 %lang(ro) %{_datadir}/%{name}/translations/fet_ro.qm
+%lang(ru) %{_datadir}/%{name}/translations/fet_ru.qm
 %lang(tr) %{_datadir}/%{name}/translations/fet_tr.qm
 %{_mandir}/man1/fet.1*
 
