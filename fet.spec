@@ -12,8 +12,6 @@ License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www.lalescu.ro/liviu/fet/download/%{name}-%{version}.tar.bz2
 # Source0-md5:	e6d32699bd61c02b8ed5ef2677a091e8
-Source1:	http://www.timetabling.de/manual/FET-manual.en.zip
-# Source1-md5:	5882c67c5955d5cd80ce53ff4802545e
 URL:		http://www.lalescu.ro/liviu/fet
 BuildRequires:	Qt3Support-devel
 BuildRequires:	QtCore-devel
@@ -71,7 +69,6 @@ Dokumentacja do programu FET autorstwa Volkera Dirra.
 
 %prep
 %setup -q
-unzip %{SOURCE1}
 
 %build
 qmake-qt4 fet.pro \
@@ -89,10 +86,6 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 %{__cp} -a examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__rm} -f $RPM_BUILD_ROOT%{_datadir}/%{name}/translations/fet_untranslated.qm
-
-# doc
-install -d $RPM_BUILD_ROOT%{_docdir}/%{name}-doc
-install FET-manual.en/* $RPM_BUILD_ROOT%{_docdir}/%{name}-doc
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -126,7 +119,3 @@ rm -rf $RPM_BUILD_ROOT
 %files examples
 %defattr(644,root,root,755)
 %{_examplesdir}/%{name}-%{version}
-
-%files doc
-%defattr(644,root,root,755)
-%{_docdir}/%{name}-doc
