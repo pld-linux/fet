@@ -49,6 +49,7 @@ Summary:	Sample inputs to FET
 Summary(hu.UTF-8):	Példafájlok FET-hez
 Summary(pl.UTF-8):	Przykładowe pliki wejściowe dla programu FET
 Group:		X11/Applications
+Requires:	%{name} = %{version}-%{release}
 
 %description examples
 Sample input files to FET from all the world.
@@ -78,6 +79,7 @@ Dokumentacja do programu FET autorstwa Volkera Dirra.
 Summary:	ar translation to fet
 Summary(hu.UTF-8):	ar fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-ar
 ar translation to fet.
@@ -86,6 +88,7 @@ ar translation to fet.
 Summary:	Catalan translation to fet
 Summary(hu.UTF-8):	Katalán fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-ca
 Catalan translation to fet.
@@ -94,6 +97,7 @@ Catalan translation to fet.
 Summary:	German translation to fet
 Summary(hu.UTF-8):	Német fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-de
 German translation to fet.
@@ -102,6 +106,7 @@ German translation to fet.
 Summary:	Greek translation to fet
 Summary(hu.UTF-8):	Görög fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-el
 Greek translation to fet.
@@ -110,6 +115,7 @@ Greek translation to fet.
 Summary:	Spanish translation to fet
 Summary(hu.UTF-8):	Spanyol fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-es
 Spanish translation to fet.
@@ -118,6 +124,7 @@ Spanish translation to fet.
 Summary:	fa translation to fet
 Summary(hu.UTF-8):	fa fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-fa
 fa translation to fet.
@@ -126,6 +133,7 @@ fa translation to fet.
 Summary:	French translation to fet
 Summary(hu.UTF-8):	Francia fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-fr
 French translation to fet.
@@ -134,6 +142,7 @@ French translation to fet.
 Summary:	Hungarian translation to fet
 Summary(hu.UTF-8):	Magyar fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-hu
 Hungarian translation to fet.
@@ -145,6 +154,7 @@ Magyar fordítás fet-hez.
 Summary:	id translation to fet
 Summary(hu.UTF-8):	id fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-id
 id translation to fet.
@@ -153,6 +163,7 @@ id translation to fet.
 Summary:	Italian translation to fet
 Summary(hu.UTF-8):	Olasz fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-it
 Italian translation to fet.
@@ -161,6 +172,7 @@ Italian translation to fet.
 Summary:	Lithuanian translation to fet
 Summary(hu.UTF-8):	Litván fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-lt
 Lithuanian translation to fet.
@@ -169,6 +181,7 @@ Lithuanian translation to fet.
 Summary:	mk translation to fet
 Summary(hu.UTF-8):	mk fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-mk
 mk translation to fet.
@@ -177,6 +190,7 @@ mk translation to fet.
 Summary:	ms translation to fet
 Summary(hu.UTF-8):	ms fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-ms
 ms translation to fet.
@@ -185,6 +199,7 @@ ms translation to fet.
 Summary:	nl translation to fet
 Summary(hu.UTF-8):	nl fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-nl
 nl translation to fet.
@@ -193,6 +208,7 @@ nl translation to fet.
 Summary:	Polish translation to fet
 Summary(hu.UTF-8):	Lengyel fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-pl
 Polish translation to fet.
@@ -201,6 +217,7 @@ Polish translation to fet.
 Summary:	Romanian translation to fet
 Summary(hu.UTF-8):	Román fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-ro
 Romanian translation to fet.
@@ -209,6 +226,7 @@ Romanian translation to fet.
 Summary:	Russian translation to fet
 Summary(hu.UTF-8):	Orosz fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-ru
 Russian translation to fet.
@@ -217,6 +235,7 @@ Russian translation to fet.
 Summary:	tr translation to fet
 Summary(hu.UTF-8):	tr fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-tr
 tr translation to fet.
@@ -225,6 +244,7 @@ tr translation to fet.
 Summary:	uk translation to fet
 Summary(hu.UTF-8):	uk fordítás fet-hez
 Group:		I18n
+Requires:	%{name} = %{version}-%{release}
 
 %description lang-uk
 uk translation to fet.
