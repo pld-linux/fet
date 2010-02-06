@@ -25,7 +25,6 @@ BuildRequires:	QtGui-devel
 BuildRequires:	QtXml-devel
 BuildRequires:	qt4-build
 BuildRequires:	qt4-qmake
-BuildRequires:	unzip
 Obsoletes:	fet-doc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
