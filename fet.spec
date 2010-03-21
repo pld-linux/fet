@@ -1,19 +1,18 @@
 # TODO:
-#	- optflags
 #	- fet doesn't respect locale settings
 #
 Summary:	FET is open source free software for automatically scheduling the timetable
 Summary(hu.UTF-8):	FET egy nyílt forrású órarend-készítő program
 Summary(pl.UTF-8):	Narzędzie do automatycznego układania planów dla szkół i uczelni
 Name:		fet
-Version:	5.12.3
+Version:	5.13.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www.lalescu.ro/liviu/fet/download/%{name}-%{version}.tar.bz2
-# Source0-md5:	3a203f86ed52b883899abce6abc1f6b0
+# Source0-md5:	619263469c576054737c8fa17ced34e2
 Source1:	http://www.lalescu.ro/liviu/fet/doc/en/faq.html
-# Source1-md5:	0bad32ba56fa0687956280d0bfb7d70a
+# Source1-md5:	7029338b802b65b42d7c2e2696bbbf27
 Source2:	http://www.lalescu.ro/liviu/fet/doc/en/instructions.html
 # Source2-md5:	68ffbb297e609ea26526b288c6e2369c
 Source3:	http://www.lalescu.ro/liviu/fet/doc/en/tips.html
@@ -91,6 +90,15 @@ Requires:	%{name} = %{version}-%{release}
 
 %description lang-ca
 Catalan translation to fet.
+
+%package lang-da
+Summary:	Danish translation to fet
+Summary(hu.UTF-8):	Dán fordítás fet-hez
+Group:		I18n
+Requires:	%{name} = %{version}-%{release}
+
+%description lang-da
+Danish translation to fet.
 
 %package lang-de
 Summary:	German translation to fet
@@ -221,6 +229,15 @@ Requires:	%{name} = %{version}-%{release}
 %description lang-ro
 Romanian translation to fet.
 
+%package lang-pt
+Summary:	Portugese translation to fet
+Summary(hu.UTF-8):	Portugal fordítás fet-hez
+Group:		I18n
+Requires:	%{name} = %{version}-%{release}
+
+%description lang-pt
+Portugese translation to fet.
+
 %package lang-ru
 Summary:	Russian translation to fet
 Summary(hu.UTF-8):	Orosz fordítás fet-hez
@@ -254,7 +271,8 @@ install %{SOURCE1} %{SOURCE2} %{SOURCE3} .
 
 %build
 qmake-qt4 fet.pro \
-	QMAKE_CXXFLAGS_RELEASE="%{rpmcxxflags}"
+	QMAKE_CXXFLAGS_RELEASE="%{rpmcxxflags}" \
+	QMAKE_CXX="%{__cxx}"
 %{__make}
 
 %install
@@ -291,6 +309,10 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-ca
 %defattr(644,root,root,755)
 %lang(ca) %{_datadir}/%{name}/translations/fet_ca.qm
+
+%files lang-da
+%defattr(644,root,root,755)
+%lang(de) %{_datadir}/%{name}/translations/fet_da.qm
 
 %files lang-de
 %defattr(644,root,root,755)
@@ -343,6 +365,10 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-pl
 %defattr(644,root,root,755)
 %lang(pl) %{_datadir}/%{name}/translations/fet_pl.qm
+
+%files lang-pt
+%defattr(644,root,root,755)
+%lang(pl) %{_datadir}/%{name}/translations/fet_pt_BR.qm
 
 %files lang-ro
 %defattr(644,root,root,755)
