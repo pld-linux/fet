@@ -5,12 +5,12 @@ Summary:	FET is open source free software for automatically scheduling the timet
 Summary(hu.UTF-8):	FET egy nyílt forrású órarend-készítő program
 Summary(pl.UTF-8):	Narzędzie do automatycznego układania planów dla szkół i uczelni
 Name:		fet
-Version:	5.14.0
+Version:	5.14.1
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www.lalescu.ro/liviu/fet/download/%{name}-%{version}.tar.bz2
-# Source0-md5:	dd78db87af82d2db091b6b636d19500c
+# Source0-md5:	ce174263d44b2eac46d97f338af98472
 Source1:	http://www.lalescu.ro/liviu/fet/doc/en/faq.html
 # Source1-md5:	7029338b802b65b42d7c2e2696bbbf27
 Source2:	http://www.lalescu.ro/liviu/fet/doc/en/instructions.html
@@ -144,6 +144,15 @@ Requires:	%{name} = %{version}-%{release}
 
 %description lang-fr
 French translation to fet.
+
+%package lang-he
+Summary:	Hebrew translation to fet
+Summary(hu.UTF-8):	Héber fordítás fet-hez
+Group:		I18n
+Requires:	%{name} = %{version}-%{release}
+
+%description lang-he
+Hebrew translation to fet.
 
 %package lang-hu
 Summary:	Hungarian translation to fet
@@ -351,6 +360,10 @@ rm -rf $RPM_BUILD_ROOT
 %files lang-fr
 %defattr(644,root,root,755)
 %lang(fr) %{_datadir}/%{name}/translations/fet_fr.qm
+
+%files lang-he
+%defattr(644,root,root,755)
+%lang(he) %{_datadir}/%{name}/translations/fet_he.qm
 
 %files lang-hu
 %defattr(644,root,root,755)
