@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=fet
+Terminal=false
+Exec=fet
+Categories=Utility
+GenericName=Timetable generating
+GenericName[hu]=Órarend generáló
+
