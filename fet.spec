@@ -6,7 +6,7 @@ Summary(hu.UTF-8):	FET egy nyílt forrású órarend-készítő program
 Summary(pl.UTF-8):	Narzędzie do automatycznego układania planów dla szkół i uczelni
 Name:		fet
 Version:	5.14.1
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www.lalescu.ro/liviu/fet/download/%{name}-%{version}.tar.bz2
@@ -18,6 +18,7 @@ Source2:	http://www.lalescu.ro/liviu/fet/doc/en/instructions.html
 Source3:	http://www.lalescu.ro/liviu/fet/doc/en/tips.html
 # Source3-md5:	d2a0a061f224d3c7ab96f7a3257a3b35
 Source4:	%{name}.desktop
+Source5:	%{name}.png
 URL:		http://www.lalescu.ro/liviu/fet
 BuildRequires:	Qt3Support-devel
 BuildRequires:	QtCore-devel
@@ -308,12 +309,24 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_datadir}/%{name}/translations}
 
 install fet $RPM_BUILD_ROOT%{_bindir}
+
+# install manual
 install doc/fet.1 $RPM_BUILD_ROOT%{_mandir}/man1
+
+# install translations
 install translations/fet_*.qm $RPM_BUILD_ROOT%{_datadir}/%{name}/translations
+
+# install examples
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+%{__cp} -a examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
+# install fet.desktop
 install -d $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE4} $RPM_BUILD_ROOT%{_desktopdir}
-%{__cp} -a examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
+# install fet.png
+install -d $RPM_BUILD_ROOT%{_iconsdir}/hicolor/32x32/apps
+install %{SOURCE5} $RPM_BUILD_ROOT%{_iconsdir}/hicolor/32x32/apps
 
 %{__rm} -f $RPM_BUILD_ROOT%{_datadir}/%{name}/translations/fet_untranslated.qm
 
@@ -327,6 +340,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/translations
 %{_desktopdir}/%{name}.desktop
+%{_iconsdir}/hicolor/32x32/apps/%{name}.png
 %{_mandir}/man1/fet.1*
 
 %files examples
