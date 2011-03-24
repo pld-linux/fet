@@ -6,7 +6,7 @@ Summary(hu.UTF-8):	FET egy nyílt forrású órarend-készítő program
 Summary(pl.UTF-8):	Narzędzie do automatycznego układania planów dla szkół i uczelni
 Name:		fet
 Version:	5.14.4
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www.lalescu.ro/liviu/fet/download/%{name}-%{version}.tar.bz2
