@@ -5,12 +5,12 @@ Summary:	FET is open source free software for automatically scheduling the timet
 Summary(hu.UTF-8):	FET egy nyílt forrású órarend-készítő program
 Summary(pl.UTF-8):	Narzędzie do automatycznego układania planów dla szkół i uczelni
 Name:		fet
-Version:	5.16.1
+Version:	5.17.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www.lalescu.ro/liviu/fet/download/%{name}-%{version}.tar.bz2
-# Source0-md5:	815e4d71efec12a596fc5e866bccdf68
+# Source0-md5:	8e136dc5f764a27322f072804ff89aea
 Source1:	http://www.lalescu.ro/liviu/fet/doc/en/faq.html
 # Source1-md5:	7029338b802b65b42d7c2e2696bbbf27
 Source2:	http://www.lalescu.ro/liviu/fet/doc/en/instructions.html
@@ -334,7 +334,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog CONTRIBUTORS README REFERENCES THANKS TODO TRANSLATORS doc/*/* faq.html instructions.html tips.html
+%doc AUTHORS ChangeLog README REFERENCES THANKS TODO TRANSLATORS doc/*/* faq.html instructions.html tips.html
 %attr(755,root,root) %{_bindir}/%{name}
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/translations
