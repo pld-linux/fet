@@ -82,6 +82,9 @@ Summary:	ar translation to fet
 Summary(hu.UTF-8):	ar fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-ar
 ar translation to fet.
@@ -91,6 +94,9 @@ Summary:	Catalan translation to fet
 Summary(hu.UTF-8):	Katalán fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-ca
 Catalan translation to fet.
@@ -100,6 +106,9 @@ Summary:	Danish translation to fet
 Summary(hu.UTF-8):	Dán fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-da
 Danish translation to fet.
@@ -109,6 +118,9 @@ Summary:	German translation to fet
 Summary(hu.UTF-8):	Német fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-de
 German translation to fet.
@@ -118,6 +130,9 @@ Summary:	Greek translation to fet
 Summary(hu.UTF-8):	Görög fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-el
 Greek translation to fet.
@@ -127,6 +142,9 @@ Summary:	Spanish translation to fet
 Summary(hu.UTF-8):	Spanyol fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-es
 Spanish translation to fet.
@@ -136,6 +154,9 @@ Summary:	fa translation to fet
 Summary(hu.UTF-8):	fa fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-fa
 fa translation to fet.
@@ -145,6 +166,9 @@ Summary:	French translation to fet
 Summary(hu.UTF-8):	Francia fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-fr
 French translation to fet.
@@ -155,6 +179,9 @@ Summary(hu.UTF-8):	Héber fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
 
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 %description lang-he
 Hebrew translation to fet.
 
@@ -163,6 +190,9 @@ Summary:	Hungarian translation to fet
 Summary(hu.UTF-8):	Magyar fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-hu
 Hungarian translation to fet.
@@ -175,6 +205,9 @@ Summary:	id translation to fet
 Summary(hu.UTF-8):	id fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-id
 id translation to fet.
@@ -184,6 +217,9 @@ Summary:	Italian translation to fet
 Summary(hu.UTF-8):	Olasz fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-it
 Italian translation to fet.
@@ -193,6 +229,9 @@ Summary:	Lithuanian translation to fet
 Summary(hu.UTF-8):	Litván fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-lt
 Lithuanian translation to fet.
@@ -202,6 +241,9 @@ Summary:	mk translation to fet
 Summary(hu.UTF-8):	mk fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-mk
 mk translation to fet.
@@ -211,6 +253,9 @@ Summary:	ms translation to fet
 Summary(hu.UTF-8):	ms fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-ms
 ms translation to fet.
@@ -220,6 +265,9 @@ Summary:	nl translation to fet
 Summary(hu.UTF-8):	nl fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-nl
 nl translation to fet.
@@ -229,6 +277,9 @@ Summary:	Polish translation to fet
 Summary(hu.UTF-8):	Lengyel fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-pl
 Polish translation to fet.
@@ -238,6 +289,9 @@ Summary:	Romanian translation to fet
 Summary(hu.UTF-8):	Román fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-ro
 Romanian translation to fet.
@@ -247,6 +301,9 @@ Summary:	Portugese translation to fet
 Summary(hu.UTF-8):	Portugal fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-pt
 Portugese translation to fet.
@@ -256,6 +313,9 @@ Summary:	Russian translation to fet
 Summary(hu.UTF-8):	Orosz fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-ru
 Russian translation to fet.
@@ -265,6 +325,9 @@ Summary:	Sinhala translation to fet
 Summary(hu.UTF-8):	Sinhala fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-si
 Sinhala translation to fet.
@@ -274,6 +337,9 @@ Summary:	Slovak translation to fet
 Summary(hu.UTF-8):	Szlovák fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-sk
 Slovak translation to fet.
@@ -283,6 +349,9 @@ Summary:	tr translation to fet
 Summary(hu.UTF-8):	tr fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-tr
 tr translation to fet.
@@ -292,6 +361,9 @@ Summary:	uk translation to fet
 Summary(hu.UTF-8):	uk fordítás fet-hez
 Group:		I18n
 Requires:	%{name} = %{version}-%{release}
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description lang-uk
 uk translation to fet.
